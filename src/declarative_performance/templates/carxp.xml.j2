@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='{{ config.version }}'>
+ <EngineSettings>
+{% for key, value in config.engine_settings.items() %}
+  <{{ key }}>{{ value }}</{{ key }}>
+{% endfor %}
+ </EngineSettings>
+
+ <Transport>
+{% for key, value in config.transport.items() %}
+  <{{ key }}>{{ value }}</{{ key }}>
+{% endfor %}
+ </Transport>
+
+{% for plugin in config.plugins %}
+ <Plugin>
+  <Info>
+{% for key, value in plugin.info.items() %}
+   <{{ key }}>{{ value }}</{{ key }}>
+{% endfor %}
+  </Info>
+
+  <Data>
+{% for key, value in plugin.data.items() %}
+{% if key == "Chunk" %}
+   <Chunk>
+{{ value }}
+   </Chunk>
+{% else %}
+   <{{ key }}>{{ value }}</{{ key }}>
+{% endif %}
+{% endfor %}
+  </Data>
+ </Plugin>
+
+{% endfor %}
+{% if config.patchbay %}
+ <Patchbay>
+{% for connection in config.patchbay.connections %}
+  <Connection>
+   <Source>{{ connection.Source }}</Source>
+   <Target>{{ connection.Target }}</Target>
+  </Connection>
+{% endfor %}
+{% if config.patchbay.positions %}
+  <Positions>
+{% for position in config.patchbay.positions %}
+   <Position{% for key, value in position.items() if key != "Name" %} {{ key }}="{{ value }}"{% endfor %}>
+    <Name>{{ position.Name }}</Name>
+   </Position>
+{% endfor %}
+  </Positions>
+{% endif %}
+ </Patchbay>
+
+{% endif %}
+{% if config.external_patchbay %}
+ <ExternalPatchbay>
+{% for connection in config.external_patchbay.connections %}
+  <Connection>
+   <Source>{{ connection.Source }}</Source>
+   <Target>{{ connection.Target }}</Target>
+  </Connection>
+{% endfor %}
+{% if config.external_patchbay.positions %}
+  <Positions>
+{% for position in config.external_patchbay.positions %}
+   <Position{% for key, value in position.items() if key != "Name" %} {{ key }}="{{ value }}"{% endfor %}>
+    <Name>{{ position.Name }}</Name>
+   </Position>
+{% endfor %}
+  </Positions>
+{% endif %}
+ </ExternalPatchbay>
+{% endif %}
+</CARLA-PROJECT>

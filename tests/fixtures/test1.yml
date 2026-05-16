@@ -1,0 +1,35 @@
+transport:
+  BeatsPerMinute: 120
+plugins:
+  - info:
+      Type: AU
+      Name: DLSMusicDevice
+      Identifier: AudioUnit:Synths/aumu,dls ,appl
+    data:
+      Active: "Yes"
+      ControlChannel: 1
+      Options: "0x3f9"
+      Chunk: |-
+        YnBsaXN0MDDdAQIDBAUGBwgJCgsMDQ4PEBEQEhMUFRYZGhtYY3B1LWxvYWRUbmFtZVd2ZXJzaW9uXxATdXNlLWludGVybmFsLXJldmVyYl5kaXNrLXN0cmVh
+        bWluZ15yZW5kZXItcXVhbGl0eVR0eXBlVGRhdGFcbWFudWZhY3R1cmVyXxAPZmlsZS1yZWZlcmVuY2VzV3N1YnR5cGVUQmFua1xlbGVtZW50LW5hbWUjAAAA
+        AAAAAABYVW50aXRsZWQQABABEH8SYXVtdU8QJAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAQAAAAAAAAACAAAAABJhcHBs0RcYW3NiLWZpbGUtcmVmXxBUL1N5
+        c3RlbS9MaWJyYXJ5L0NvbXBvbmVudHMvQ29yZUF1ZGlvLmNvbXBvbmVudC9Db250ZW50cy9SZXNvdXJjZXMvZ3NfaW5zdHJ1bWVudHMuZGxzEmRscyBPEQGo
+        AAAAAAGoAAIAAAxNYWNpbnRvc2ggSEQAAAAAAAAAAAAAAAAAAADmGSHvQkQAAf////8SZ3NfaW5zdHJ1bWVudHMuZGxzAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////+YZIe8AAAAAAAAAAP////8AAAogY3UAAAAAAAAAAAAAAAAACVJlc291cmNlcwAAAgBVLzpTeXN0ZW06TGli
+        cmFyeTpDb21wb25lbnRzOkNvcmVBdWRpby5jb21wb25lbnQ6Q29udGVudHM6UmVzb3VyY2VzOmdzX2luc3RydW1lbnRzLmRscwAADgAmABIAZwBzAF8AaQBu
+        AHMAdAByAHUAbQBlAG4AdABzAC4AZABsAHMADwAaAAwATQBhAGMAaQBuAHQAbwBzAGgAIABIAEQAEgBTU3lzdGVtL0xpYnJhcnkvQ29tcG9uZW50cy9Db3Jl
+        QXVkaW8uY29tcG9uZW50L0NvbnRlbnRzL1Jlc291cmNlcy9nc19pbnN0cnVtZW50cy5kbHMAABMAAS8A//8AANEcHVEy0h4fICFRMFExWnN0ZXJlbyBtaXhW
+        dW51c2VkAAgAIwAsADEAOQBPAF4AbQByAHcAhACWAJ4AowCwALkAwgDEAMYAyADNAPQA+QD8AQgBXwFkAxADEwMVAxoDHAMeAykAAAAAAAACAQAAAAAAAAAi
+        AAAAAAAAAAAAAAAAAAADMA==
+patchbay:
+  connections:
+    - Source: Midi Input:Capture 1
+      Target: Midi Output:Playback 1
+    - Source: Midi Input:Capture 1
+      Target: DLSMusicDevice:events-in
+    - Source: DLSMusicDevice:output_1
+      Target: Audio Output:Playback 1
+external_patchbay:
+  connections:
+    - Source: MidiIn:CASIO USB-MIDI
+      Target: Carla:MidiIn

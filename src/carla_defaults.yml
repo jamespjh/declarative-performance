@@ -1,0 +1,12 @@
+version: "2.5"
+engine_settings:
+  ForceStereo: false
+  PreferPluginBridges: false
+  PreferUiBridges: true
+  UIsAlwaysOnTop: false
+  MaxParameters: 200
+  UIBridgesTimeout: 4000
+patchbay:
+  positions: []
+external_patchbay:
+  positions: []

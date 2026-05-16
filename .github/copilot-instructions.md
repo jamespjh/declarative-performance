@@ -33,3 +33,9 @@ When proposing code or architecture:
 - Record decisions in decision-log.md when they harden.
 
 - Prefer inspectable, testable, text-based configuration.
+
+Python environment note:
+
+- This repository uses `venv` at the project root.
+
+- Do not create or reference `.venv`.
