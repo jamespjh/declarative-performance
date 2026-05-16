@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling>=1.24.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "declarative-performance"
+version = "0.1.0"
+description = "Declarative musical performance system"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+  { name = "James Hetheringtonpy" }
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0"
+]
+
+[project.scripts]
+declarative-performance = "declarative_performance.cli:main"
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-q"
+testpaths = ["tests"]
+pythonpath = ["src"]
