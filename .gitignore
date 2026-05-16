@@ -1,3 +1,19 @@
 .pyc
 .DS_Store
 __pycache__/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Secrets and credentials
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.p8
+*.p12
+*.pfx

@@ -1,0 +1,89 @@
+{
+  "length_bytes": 424,
+  "header": {
+    "user_type": 0,
+    "record_size": 424,
+    "version": 2,
+    "alias_kind": 0,
+    "volume_name": "Macintosh HD",
+    "target_name": "gs_instruments.dls",
+    "matches_record_size": true
+  },
+  "tag_records": [
+    {
+      "offset": 150,
+      "tag": 0,
+      "length": 9,
+      "payload_hex": "5265736f7572636573",
+      "payload_text": "Resources"
+    },
+    {
+      "offset": 164,
+      "tag": 2,
+      "length": 85,
+      "payload_hex": "2f3a53797374656d3a4c6962726172793a436f6d706f6e656e74733a436f7265417564696f2e636f6d706f6e656e743a436f6e74656e74733a5265736f75726365733a67735f696e737472756d656e74732e646c73",
+      "payload_text": "/:System:Library:Components:CoreAudio.component:Contents:Resources:gs_instruments.dls"
+    },
+    {
+      "offset": 254,
+      "tag": 14,
+      "length": 38,
+      "payload_hex": "001200670073005f0069006e0073007400720075006d0065006e00740073002e0064006c0073"
+    },
+    {
+      "offset": 296,
+      "tag": 15,
+      "length": 26,
+      "payload_hex": "000c004d006100630069006e0074006f00730068002000480044"
+    },
+    {
+      "offset": 326,
+      "tag": 18,
+      "length": 83,
+      "payload_hex": "53797374656d2f4c6962726172792f436f6d706f6e656e74732f436f7265417564696f2e636f6d706f6e656e742f436f6e74656e74732f5265736f75726365732f67735f696e737472756d656e74732e646c73",
+      "payload_text": "System/Library/Components/CoreAudio.component/Contents/Resources/gs_instruments.dls"
+    },
+    {
+      "offset": 414,
+      "tag": 19,
+      "length": 1,
+      "payload_hex": "2f",
+      "payload_text": "/"
+    },
+    {
+      "offset": 420,
+      "tag": -1,
+      "length": 0,
+      "payload_hex": "",
+      "payload_text": ""
+    }
+  ],
+  "ascii_runs": [
+    {
+      "offset": 11,
+      "length": 12,
+      "text": "Macintosh HD"
+    },
+    {
+      "offset": 51,
+      "length": 18,
+      "text": "gs_instruments.dls"
+    },
+    {
+      "offset": 154,
+      "length": 9,
+      "text": "Resources"
+    },
+    {
+      "offset": 167,
+      "length": 86,
+      "text": "U/:System:Library:Components:CoreAudio.component:Contents:Resources:gs_instruments.dls"
+    },
+    {
+      "offset": 329,
+      "length": 84,
+      "text": "SSystem/Library/Components/CoreAudio.component/Contents/Resources/gs_instruments.dls"
+    }
+  ],
+  "hex": "0000000001a8000200000c4d6163696e746f7368204844000000000000000000000000000000e61921ef42440001ffffffff1267735f696e737472756d656e74732e646c73000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffe61921ef0000000000000000ffffffff00000a20637500000000000000000000000000095265736f757263657300000200552f3a53797374656d3a4c6962726172793a436f6d706f6e656e74733a436f7265417564696f2e636f6d706f6e656e743a436f6e74656e74733a5265736f75726365733a67735f696e737472756d656e74732e646c7300000e0026001200670073005f0069006e0073007400720075006d0065006e00740073002e0064006c0073000f001a000c004d006100630069006e0074006f007300680020004800440012005353797374656d2f4c6962726172792f436f6d706f6e656e74732f436f7265417564696f2e636f6d706f6e656e742f436f6e74656e74732f5265736f75726365732f67735f696e737472756d656e74732e646c7300001300012f00ffff0000"
+}
