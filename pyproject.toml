@@ -11,7 +11,11 @@ requires-python = ">=3.11"
 authors = [
   { name = "James Hetheringtonpy" }
 ]
-dependencies = []
+dependencies = [
+  "Jinja2>=3.1",
+  "lxml>=5.2",
+  "PyYAML>=6.0"
+]
 
 [project.optional-dependencies]
 dev = [

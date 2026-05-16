@@ -18,6 +18,8 @@
 
 - CI/testing should exist from early in the project.
 
+- Carla `.carxp` generation should support a fixture-backed MVP with opaque plugin `Chunk` data, while preserving a later path to decode and synthesize that state programmatically.
+
 ## Rejected or deprioritised
 
 - Heavy DAW-centric live workflows.
